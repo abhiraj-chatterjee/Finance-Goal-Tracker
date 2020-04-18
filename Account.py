@@ -28,7 +28,7 @@ class User_Account:
       percent = 0
       remainder = 0
     else:
-      percent = (self.db[self.username]["savings"]/self.db[self.username]["goal"]) * 100
+      percent = int((self.db[self.username]["savings"]/self.db[self.username]["goal"]) * 100)
       remainder = self.db[self.username]["goal"] - self.db[self.username]["savings"]
     print('{}% '.format(percent) + ' of goal completed')
     print('${}'.format(remainder) + ' left to go')
