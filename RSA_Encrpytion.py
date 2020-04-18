@@ -86,7 +86,7 @@ class RSA_Encryption:
     self.public_key = (n,e)
     self.private_key = (n,d)
 
-  def modular_pow(self,base,exponent,modulus):
+  def modular_pow(self,base,exponent,modulus): # Modular Exponentiation
     result = 1
     while exponent > 0:
       if exponent % 2 == 1:
