@@ -1,15 +1,21 @@
 import json
 from New_Account import *
 from RSA_Encrpytion import *
+from History import *
 class User_Account:
   def __init__(self):
     self.username = ''
     self.password = ''
     self.db = {}
 
+  def update(self,amt,t):
+    hist = Transaction_History(self.username)
+    hist.update_history(amt,t)
+
   def deposit(self):
     amount = float(input('Enter amount to be added: '))
     self.db[self.username]["savings"] += amount
+    self.update(amount,'Deposit')
 
   def withdraw(self):
     amount = float(input('Enter amount to be removed: '))
@@ -17,11 +23,13 @@ class User_Account:
       print('Savings not enough!')
       return
     self.db[self.username]["savings"] -= amount
+    self.update(amount,'Withdraw')
 
   def update_goal(self):
     print(self.db[self.username]["goal"])
     change_in_goal = float(input('Enter change in goal: '))
     self.db[self.username]["goal"] += change_in_goal
+    self.update(change_in_goal,"Goal Update")
 
   def progress(self):
     if self.db[self.username]["goal"] == 0:

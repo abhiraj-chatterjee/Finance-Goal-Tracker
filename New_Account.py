@@ -29,4 +29,11 @@ class Create_New_Account:
     db[self.username]["key"] = k
     with open("database.json","w") as write_file:
       json.dump(db,write_file,indent=4)
+    with open("history.json","r") as read_file:
+      data = json.load(read_file)
+    data[self.username] = {}
+    data[self.username]["Transactions"] = 0
+    with open("history.json","w") as write_file:
+      json.dump(data,write_file,indent=4)
+
 
