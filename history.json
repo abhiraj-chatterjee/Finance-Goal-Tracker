@@ -1,6 +1,6 @@
 {
     "Abhiraj Chatterjee": {
-        "Transactions": 9,
+        "Transactions": 10,
         "T1": {
             "type": "Deposit",
             "amount": 240.0,
@@ -54,6 +54,12 @@
             "amount": 500.0,
             "source": "Mouse/Mousepad",
             "time": "2020-04-19 15:29:27"
+        },
+        "T10": {
+            "type": "Goal Update",
+            "amount": 2000.0,
+            "source": "Desk",
+            "time": "2020-04-19 15:39:37"
         }
     },
     "Neelina Chatterjee": {
