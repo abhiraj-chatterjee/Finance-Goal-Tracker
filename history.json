@@ -1,6 +1,6 @@
 {
     "Abhiraj Chatterjee": {
-        "Transactions": 4,
+        "Transactions": 5,
         "T1": {
             "type": "Deposit",
             "amount": 240.0,
@@ -24,6 +24,12 @@
             "amount": 3000.0,
             "source": "Dual Monitors",
             "time": "2020-04-19 14:54:49"
+        },
+        "T5": {
+            "type": "Goal Update",
+            "amount": 500.0,
+            "source": "Headphones",
+            "time": "2020-04-19 15:07:53"
         }
     },
     "Neelina Chatterjee": {
