@@ -1,6 +1,6 @@
 {
     "Abhiraj Chatterjee": {
-        "Transactions": 5,
+        "Transactions": 6,
         "T1": {
             "type": "Deposit",
             "amount": 240.0,
@@ -30,6 +30,12 @@
             "amount": 500.0,
             "source": "Headphones",
             "time": "2020-04-19 15:07:53"
+        },
+        "T6": {
+            "type": "Goal Update",
+            "amount": 50.0,
+            "source": "Stress Ball(s)",
+            "time": "2020-04-19 15:11:41"
         }
     },
     "Neelina Chatterjee": {
