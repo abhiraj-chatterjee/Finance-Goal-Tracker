@@ -1,6 +1,6 @@
 {
     "Abhiraj Chatterjee": {
-        "Transactions": 2,
+        "Transactions": 3,
         "T1": {
             "type": "Deposit",
             "amount": 240.0,
@@ -12,6 +12,12 @@
             "amount": 3000.0,
             "source": "New MacBook Pro",
             "time": "2020-04-19 13:39:33"
+        },
+        "T3": {
+            "type": "Goal Update",
+            "amount": 1000.0,
+            "source": "New iPhone",
+            "time": "2020-04-19 14:18:56"
         }
     },
     "Neelina Chatterjee": {
