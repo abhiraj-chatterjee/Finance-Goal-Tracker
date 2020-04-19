@@ -7,5 +7,20 @@
             "source": "Loop Software",
             "time": "2020-04-19 11:43:20"
         }
+    },
+    "Neelina Chatterjee": {
+        "Transactions": 2,
+        "T1": {
+            "type": "Goal Update",
+            "amount": 100000.0,
+            "source": "Retirement",
+            "time": "2020-04-19 12:09:05"
+        },
+        "T2": {
+            "type": "Deposit",
+            "amount": 500.0,
+            "source": "Skittles legal fees",
+            "time": "2020-04-19 12:09:53"
+        }
     }
 }
