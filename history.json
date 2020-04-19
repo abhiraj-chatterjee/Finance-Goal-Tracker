@@ -1,11 +1,17 @@
 {
     "Abhiraj Chatterjee": {
-        "Transactions": 1,
+        "Transactions": 2,
         "T1": {
             "type": "Deposit",
             "amount": 240.0,
             "source": "Loop Software",
             "time": "2020-04-19 11:43:20"
+        },
+        "T2": {
+            "type": "Goal Update",
+            "amount": 3000.0,
+            "source": "New MacBook Pro",
+            "time": "2020-04-19 13:39:33"
         }
     },
     "Neelina Chatterjee": {
