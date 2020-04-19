@@ -1,6 +1,6 @@
 {
     "Abhiraj Chatterjee": {
-        "Transactions": 12,
+        "Transactions": 29,
         "T1": {
             "type": "Deposit",
             "amount": 240.0,
@@ -72,6 +72,108 @@
             "amount": 500.0,
             "source": "Uninterrupable Power Supply",
             "time": "2020-04-19 16:26:11"
+        },
+        "T13": {
+            "type": "Goal Update",
+            "amount": 1000.0,
+            "source": "Headphones",
+            "time": "2020-04-19 16:35:54"
+        },
+        "T14": {
+            "type": "Goal Update",
+            "amount": 1500.0,
+            "source": "MIDI Keyboard",
+            "time": "2020-04-19 16:38:23"
+        },
+        "T15": {
+            "type": "Goal Update",
+            "amount": 5000.0,
+            "source": "Audio Interface",
+            "time": "2020-04-19 16:40:20"
+        },
+        "T16": {
+            "type": "Goal Update",
+            "amount": 5000.0,
+            "source": "Microphone",
+            "time": "2020-04-19 16:41:41"
+        },
+        "T17": {
+            "type": "Goal Update",
+            "amount": 1000.0,
+            "source": "Acoustic Treatment",
+            "time": "2020-04-19 17:07:27"
+        },
+        "T18": {
+            "type": "Goal Update",
+            "amount": 1000.0,
+            "source": "Beat Pad",
+            "time": "2020-04-19 17:13:07"
+        },
+        "T19": {
+            "type": "Goal Update",
+            "amount": 2000.0,
+            "source": "Sound Monitors",
+            "time": "2020-04-19 17:13:59"
+        },
+        "T20": {
+            "type": "Goal Update",
+            "amount": 500.0,
+            "source": "External Hard Drive",
+            "time": "2020-04-19 17:15:50"
+        },
+        "T21": {
+            "type": "Goal Update",
+            "amount": 500.0,
+            "source": "Mouse",
+            "time": "2020-04-19 17:18:46"
+        },
+        "T22": {
+            "type": "Goal Update",
+            "amount": 3000.0,
+            "source": "iMac",
+            "time": "2020-04-19 17:21:32"
+        },
+        "T23": {
+            "type": "Goal Update",
+            "amount": 3000.0,
+            "source": "New MacBook Pro",
+            "time": "2020-04-19 17:26:21"
+        },
+        "T24": {
+            "type": "Goal Update",
+            "amount": 10000.0,
+            "source": "iMac Pro",
+            "time": "2020-04-19 17:27:52"
+        },
+        "T25": {
+            "type": "Goal Update",
+            "amount": 5000.0,
+            "source": "iPad Pro",
+            "time": "2020-04-19 17:33:33"
+        },
+        "T26": {
+            "type": "Goal Update",
+            "amount": 500.0,
+            "source": "Apple Pencil",
+            "time": "2020-04-19 17:35:10"
+        },
+        "T27": {
+            "type": "Goal Update",
+            "amount": 500.0,
+            "source": "Apple Keyboard",
+            "time": "2020-04-19 17:36:06"
+        },
+        "T28": {
+            "type": "Goal Update",
+            "amount": 500.0,
+            "source": "Apple TV",
+            "time": "2020-04-19 17:37:56"
+        },
+        "T29": {
+            "type": "Goal Update",
+            "amount": 5000.0,
+            "source": "TV",
+            "time": "2020-04-19 17:40:15"
         }
     },
     "Neelina Chatterjee": {
