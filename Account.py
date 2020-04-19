@@ -41,6 +41,23 @@ class User_Account:
     print('{}% '.format(percent) + ' of goal completed')
     print('${}'.format(remainder) + ' left to go')
 
+  def create_bank_statement(self):
+    f = open(self.username+' Statement.tsv',"w")
+    f.write('Type\tAmount\tSource\tTime\n')
+    with open("history.json","r") as read_file:
+      data = json.load(read_file)
+    for each in data[self.username]:
+      row = ''
+      if each == 'Transactions':
+        continue
+      for each1 in data[self.username][each]:
+        row = row + str(data[self.username][each][each1]) + '\t'
+      row = row.rstrip('\t')
+      row = row + '\n'
+      f.write(row)
+    print('Success! Your statement is ready as ' + self.username + ' Statement.tsv')
+    f.close()
+
   def open_account(self):
     self.username = input('Enter Account Name: ')
     with open("database.json","r") as read_file:
@@ -69,7 +86,8 @@ class User_Account:
     print('2. Withdraw')
     print('3. Update Goal')
     print('4. Progress')
-    choice = int(input('Enter your choice number (1-4): '))
+    print('5. Create Statement')
+    choice = int(input('Enter your choice number (1-5): '))
     if choice == 1:
       self.deposit()
     elif choice == 2:
@@ -78,6 +96,8 @@ class User_Account:
       self.update_goal()
     elif choice == 4:
       self.progress()
+    elif choice == 5:
+      self.create_bank_statement()
     with open("database.json","w") as write_file:
       json.dump(self.db,write_file,indent=4)
 
