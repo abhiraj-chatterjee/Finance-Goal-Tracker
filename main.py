@@ -4,6 +4,7 @@ class Main:
     pass
 
   def run(self):
+    print()
     print('**************** Finance Goal Tracker ****************')
     user = User_Account()
     user.open_account()

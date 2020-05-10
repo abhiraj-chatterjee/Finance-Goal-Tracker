@@ -58,6 +58,26 @@ class User_Account:
     print('Success! Your statement is ready as ' + self.username + ' Statement.tsv')
     f.close()
 
+  def security_verify(self):
+    print()
+    print('**************** Security Questions ****************')
+    correct = 0
+    email = input('Enter Linked Email: ')
+    if email == self.db[self.username]["email"]:
+      correct += 1
+    phone = input('Enter Linked Phone Number (without country code): ')
+    if phone == self.db[self.username]["phone"]:
+      correct += 1
+    date_of_birth = input('Enter your date of birth (MM/DD/YYYY): ')
+    if date_of_birth == self.db[self.username]["dob"]:
+      correct += 1
+    if correct == 3:
+      print()
+      print('Verified!')
+      return True
+    else:
+      return False
+
   def open_account(self):
     self.username = input('Enter Account Name: ')
     with open("database.json","r") as read_file:
@@ -72,15 +92,27 @@ class User_Account:
         self.open_account()
       else:
         return
+    password_tries = 0
     while True:
+      password_tries += 1
       self.password = input('Enter Account Password: ')
       p = self.db[self.username]["password"]
       k = self.db[self.username]["key"]
       r = RSA_Encryption()
       correct_password = r.decrypt(k,p)
       if correct_password == self.password:
+        if password_tries > 1:
+          if self.security_verify() == False:
+            print()
+            print('Sorry! You answered incorrectly to 1 or more of the security questions. Goodbye!')
+            return
         break
-      print('Wrong Password! Please Try Again!')
+      if password_tries == 5:
+        print()
+        print('Sorry! You have no more attempts left. Goodbye!')
+        return
+      print('Wrong Password! You have ' + str(5-password_tries) + ' more attempt(s). Please Try Again!')
+    print()
     print('**************** ' + self.username + '\'s Account ***************')
     print('1. Deposit')
     print('2. Withdraw')
