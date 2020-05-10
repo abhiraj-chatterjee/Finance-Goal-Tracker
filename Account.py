@@ -99,6 +99,7 @@ class User_Account:
         x = Create_New_Account()
         x.credentials()
         x.updating_database()
+        self.username = x.username
         print()
         self.open_account(1)
         return

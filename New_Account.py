@@ -9,6 +9,7 @@ class Create_New_Account:
     self.date_of_birth = ''
 
   def credentials(self):
+    print()
     print('**************** NEW ACCOUNT ****************')
     self.username = input('Enter Account Name: ')
     self.password = input('Enter Account Password: ')
