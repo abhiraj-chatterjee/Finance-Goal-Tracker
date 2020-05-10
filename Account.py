@@ -100,6 +100,8 @@ class User_Account:
         print()
         self.open_account()
       else:
+        print()
+        print('Thank you for using Finance Goal Tracker! Goodbye!')
         return
     password_tries = 0
     while True:
