@@ -78,8 +78,10 @@ class User_Account:
     else:
       return False
 
-  def open_account(self):
-    while True:
+  def open_account(self,logged_in=0):
+    print()
+    print('**************** Finance Goal Tracker ****************')
+    while logged_in == 0 and True:
       self.username = input('Enter Account Name: ')
       if ' ' not in self.username:
         decision = input('Do you have an account? Enter yes or no: ')
@@ -98,13 +100,14 @@ class User_Account:
         x.credentials()
         x.updating_database()
         print()
-        self.open_account()
+        self.open_account(1)
+        return
       else:
         print()
         print('Thank you for using Finance Goal Tracker! Goodbye!')
         return
     password_tries = 0
-    while True:
+    while logged_in == 0 and True:
       password_tries += 1
       self.password = input('Enter Account Password: ')
       p = self.db[self.username]["password"]
@@ -117,14 +120,15 @@ class User_Account:
             print()
             print('Sorry! You answered incorrectly to 1 or more of the security questions. Goodbye!')
             return
-        break
+        else:
+          break
       if password_tries == 5:
         print()
         print('Sorry! You have no more attempts left. Goodbye!')
         return
       print('Wrong Password! You have ' + str(5-password_tries) + ' more attempt(s). Please Try Again!')
     flag = 0
-    while True:
+    while flag != 2:
       print()
       print('**************** ' + self.username + '\'s Account ***************')
       print('1. Deposit')
@@ -132,18 +136,18 @@ class User_Account:
       print('3. Update Goal')
       print('4. Progress')
       print('5. Create Statement')
+      if flag == 1:
+        print()
+        print('Incorrect choice entered. Please try again!', end=' ')
+        flag = 0
+      else:
+        print()
       try:
-        if flag == 1:
-          print()
-          print('Incorrect choice entered. Please try again!', end=' ')
-          flag = 0
-        else:
-          print()
         choice = int(input('Enter your choice number (1-5): '))
         if (choice < 1 or choice > 5):
           flag = 1
         else:
-          break
+          flag = 2
       except:
         flag = 1
     if choice == 1:
