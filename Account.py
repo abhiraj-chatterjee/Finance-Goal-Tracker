@@ -79,7 +79,16 @@ class User_Account:
       return False
 
   def open_account(self):
-    self.username = input('Enter Account Name: ')
+    while True:
+      self.username = input('Enter Account Name: ')
+      if ' ' not in self.username:
+        decision = input('Do you have an account? Enter yes or no: ')
+        if decision == 'no':
+          break
+        else:
+          print('Please enter your full name.', end=' ')
+      else:
+        break
     with open("database.json","r") as read_file:
       self.db = json.load(read_file)
     if self.username not in self.db:
