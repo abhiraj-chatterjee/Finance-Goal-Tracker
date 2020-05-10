@@ -127,41 +127,53 @@ class User_Account:
         print('Sorry! You have no more attempts left. Goodbye!')
         return
       print('Wrong Password! You have ' + str(5-password_tries) + ' more attempt(s). Please Try Again!')
-    flag = 0
-    while flag != 2:
-      print()
-      print('**************** ' + self.username + '\'s Account ***************')
-      print('1. Deposit')
-      print('2. Withdraw')
-      print('3. Update Goal')
-      print('4. Progress')
-      print('5. Create Statement')
-      if flag == 1:
+    choice = 0
+    while choice != 6:
+      flag = 0
+      while flag != 2:
         print()
-        print('Incorrect choice entered. Please try again!', end=' ')
-        flag = 0
-      else:
-        print()
-      try:
-        choice = int(input('Enter your choice number (1-5): '))
-        if (choice < 1 or choice > 5):
-          flag = 1
+        print('**************** ' + self.username + '\'s Account ***************')
+        print('1. Deposit')
+        print('2. Withdraw')
+        print('3. Update Goal')
+        print('4. Progress')
+        print('5. Create Statement')
+        print('6. Exit')
+        if flag == 1:
+          print()
+          print('Incorrect choice entered. Please try again!', end=' ')
+          flag = 0
         else:
-          flag = 2
-      except:
-        flag = 1
-    if choice == 1:
-      self.deposit()
-    elif choice == 2:
-      self.withdraw()
-    elif choice == 3:
-      self.update_goal()
-    elif choice == 4:
-      self.progress()
-    elif choice == 5:
-      self.create_bank_statement()
-    with open("database.json","w") as write_file:
-      json.dump(self.db,write_file,indent=4)
+          print()
+        try:
+          choice = int(input('Enter your choice number (1-5): '))
+          if (choice < 1 or choice > 6):
+            flag = 1
+          else:
+            flag = 2
+        except:
+          flag = 1
+      print()
+      if choice == 1:
+        self.deposit()
+      elif choice == 2:
+        self.withdraw()
+      elif choice == 3:
+        self.update_goal()
+      elif choice == 4:
+        self.progress()
+      elif choice == 5:
+        self.create_bank_statement()
+      with open("database.json","w") as write_file:
+        json.dump(self.db,write_file,indent=4)
+      if choice != 6:
+        print()
+        decision = input('Would you like to continue? Enter yes or no: ')
+        if decision == 'no':
+          break
+    print()
+    print('Thank you for using Finance Goal Tracker! Goodbye!')
+    return
 
 
 
