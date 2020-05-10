@@ -121,14 +121,29 @@ class User_Account:
         print('Sorry! You have no more attempts left. Goodbye!')
         return
       print('Wrong Password! You have ' + str(5-password_tries) + ' more attempt(s). Please Try Again!')
-    print()
-    print('**************** ' + self.username + '\'s Account ***************')
-    print('1. Deposit')
-    print('2. Withdraw')
-    print('3. Update Goal')
-    print('4. Progress')
-    print('5. Create Statement')
-    choice = int(input('Enter your choice number (1-5): '))
+    flag = 0
+    while True:
+      print()
+      print('**************** ' + self.username + '\'s Account ***************')
+      print('1. Deposit')
+      print('2. Withdraw')
+      print('3. Update Goal')
+      print('4. Progress')
+      print('5. Create Statement')
+      try:
+        if flag == 1:
+          print()
+          print('Incorrect choice entered. Please try again!', end=' ')
+          flag = 0
+        else:
+          print()
+        choice = int(input('Enter your choice number (1-5): '))
+        if (choice < 1 or choice > 5):
+          flag = 1
+        else:
+          break
+      except:
+        flag = 1
     if choice == 1:
       self.deposit()
     elif choice == 2:
