@@ -190,5 +190,8 @@
             "source": "Skittles legal fees",
             "time": "2020-04-19 12:09:53"
         }
+    },
+    "John Smith": {
+        "Transactions": 0
     }
 }
